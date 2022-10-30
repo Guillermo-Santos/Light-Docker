@@ -4,23 +4,25 @@
     $RecordSet = pg_query($db_connection, $SQLQuery);
 
 ?>
-<h1> Comidas </h1> 
-<table class="table table-bordered">
-    <thead>
-        <th>Nombre</th>
-        <th>Pais</th>
-    </thead>
-    <tbody>
-<?php
-   while ($row = pg_fetch_row($RecordSet)) {
-?>
-         <tr>
-             <td><?php echo $row[1]; ?></td>
-             <td><?php echo $row[2]; ?></td>
-        </tr>
-<?php
-    }
-    pg_close($db_connection);
-?>
-</tbody>
-</table>
+<h1> Comidas </h1>
+<div style="text-align:center;width: 400px;margin: 0 auto;border-style: dotted;">
+    <table class="table table-bordered">
+        <thead>
+            <th>Nombre</th>
+            <th>Pais</th>
+        </thead>
+        <tbody>
+            <?php
+               while ($row = pg_fetch_row($RecordSet)) {
+            ?>
+            <tr>
+                <td><?php echo $row[1]; ?></td>
+                <td><?php echo $row[2]; ?></td>
+            </tr>
+            <?php
+                }
+                pg_close($db_connection);
+            ?>
+        </tbody>
+    </table>
+</div>
