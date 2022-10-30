@@ -23,7 +23,7 @@ services:
     container_name: postgres
     restart: always
     environment:
-      POSTGRES_DB: myDb
+      POSTGRES_DB: postgresql
       POSTGRES_USER: 2-18-0494
       POSTGRES_PASSWORD: 2180494
     networks:
