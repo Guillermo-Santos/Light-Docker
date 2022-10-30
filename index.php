@@ -1,5 +1,5 @@
 <?php
-    $db_connection = pg_connect("host=databaseWilliam port=5432 dbname=postgres user=williamdel password=2181336");
+    $db_connection = pg_connect("host=postgresql port=5432 dbname=postgres user=2-18-0494 password=2180494");
     $SQLQuery = 'SELECT * FROM Comidas';
     $RecordSet = pg_query($db_connection, $SQLQuery);
 
