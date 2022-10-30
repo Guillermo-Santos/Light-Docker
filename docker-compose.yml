@@ -1,0 +1,38 @@
+version: "3.7"
+
+networks:
+  webapp:
+
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: containerwill
+    restart: always
+    links:
+        - postgresql
+    ports:
+      - 8050:80
+    networks:
+      - webapp
+    depends_on:
+      - postgresql
+
+  postgresql:
+    image: postgres:14.5-alpine
+    container_name: will_postgres
+    restart: always
+    environment:
+      POSTGRES_DB: postgresql
+      POSTGRES_USER: 2-18-0494
+      POSTGRES_PASSWORD: 2180494
+    networks:
+      - webapp
+    ports:
+      - "5432:5432"
+    volumes:
+      - data:/var/lib/postgresql/data
+
+volumes:
+  data:
