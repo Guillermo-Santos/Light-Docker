@@ -5,7 +5,7 @@
 
 ?>
 <h1> Mis Folders </h1>
-<div style="text-align:center;width: 700px;margin: 0 auto;border-style: dotted;">
+<div style="text-align:center;width: 575px;margin: 0 auto;border-style: dotted;">
     <table class="table table-bordered">
         <thead>
             <th>Id</th>
