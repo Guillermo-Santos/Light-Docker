@@ -2,7 +2,7 @@ CREATE TABLE Folders(
 Id VARCHAR(15),
 Descripcion VARCHAR(45),
 ShortDesc VARCHAR(15),
-Parent VARCHAR(15),
+Parent VARCHAR(15)
 );
 
 

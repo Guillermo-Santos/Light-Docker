@@ -13,7 +13,7 @@ services:
     links:
         - postgresql
     ports:
-      - 8050:80
+      - 8000:80
     networks:
       - webapp
     depends_on:

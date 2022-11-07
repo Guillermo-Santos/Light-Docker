@@ -18,10 +18,10 @@
                while ($row = pg_fetch_row($RecordSet)) {
             ?>
             <tr>
+                <td><?php echo $row[0]; ?></td>
                 <td><?php echo $row[1]; ?></td>
                 <td><?php echo $row[2]; ?></td>
                 <td><?php echo $row[3]; ?></td>
-                <td><?php echo $row[4]; ?></td>
             </tr>
             <?php
                 }
