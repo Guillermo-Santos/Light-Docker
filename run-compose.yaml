@@ -1,0 +1,19 @@
+- name: run compose
+  hosts: all
+  tasks:
+    - name: Copy data
+      copy:
+        src: ./
+        dest: app
+    - name: Tear down existing services
+      docker_compose:
+        project_src: app
+        state: absent
+    - name: Run "docker-compose up"
+      docker_compose:
+        project_src: app
+        build: true
+      register: output
+    - debug:
+        var: output
+
