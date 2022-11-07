@@ -1,9 +1,13 @@
-CREATE TABLE Comidas(
-numcontrol BIGINT,
-nombre VARCHAR(45),
-pais VARCHAR(45)
+CREATE TABLE Folders(
+Id VARCHAR(15),
+Descripcion VARCHAR(45),
+ShortDesc VARCHAR(15),
+Parent VARCHAR(15),
 );
 
 
-INSERT INTO Comidas (numcontrol,nombre,pais)
- VALUES(1000,'Mangu','RD'),(1001,'Sancocho','RD'),(1002,'Hamburguesas','USA');
+INSERT INTO Folders (Id,Descripcion,ShortDesc,Parent)
+ VALUES('MASTER_FOLDER','Folder Maestro','Maestro', '')
+ ,('UTILITIES','Folder de utilieria','Utileria', 'TOOLS')
+ ,('TOOLS','Folder de herramientas','Herramientas', 'MASTER_FOLDER')
+ ,('TASKS','Folder de tareas','Tareas', 'MASTER_FOLDER');
